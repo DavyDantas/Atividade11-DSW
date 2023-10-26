@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<h1>Formulario de Aluno</h1>
+
+    <form method="post" action="{% url 'alunoForm' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+
+{% endblock main %}
