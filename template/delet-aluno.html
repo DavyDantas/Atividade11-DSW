@@ -1,0 +1,14 @@
+{% extends  'base.html' %}
+
+{% block main %}
+
+
+<form method="post">
+    {% csrf_token %}
+    <p>Você deseja exluir o disco ?</p>
+    <input type="submit" value="Sim" name="" id="">
+    <button><a href="{% url 'ListAluno' %}">Cancelar</a></button>
+</form>
+
+
+{% endblock %}
